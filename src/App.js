@@ -8,10 +8,18 @@ const App = () => {
   return (
     <div>
       {
-        profiles.map(profile => {
-          return <User name={profile.name} age={profile.age} />
+        profiles.map((profile, index) => {
+          return <User name={profile.name} age={profile.age} key={index}/>
         })
-      }
+    }
+{/*
+
+index.js:1375 Warning: Each child in a list should have a unique "key" prop.
+
+Check the render method of `App`. See https://fb.me/react-warning-keys for more information.
+in User (at App.js:12)
+in App (at src/index.js:7)
+*/}
     </div>
   )
 }
