@@ -1,16 +1,11 @@
-// import React, { Component } from 'react';
 import React from 'react';
 
-// class App extends Component {
-//   render() {
-//     // return <h1>Hello, world</h1>
-//     return (
-//       <>
-//         <label htmlFor="for">bar</label>
-//         <input type="text" onClick={() => { console.log('hi') }} />
-//       </>
-//     )
-//   }
-// }
-const App = () => <div>Hi</div>
+const App = () => {
+  return (
+<div>
+  <User name={"taro"} />
+</div>
+  )
+}
+const User = props => <div>Hi, I am {props.name} </div>
 export default App;
