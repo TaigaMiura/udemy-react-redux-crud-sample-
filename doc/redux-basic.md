@@ -35,27 +35,24 @@ const store = createStore(formReducer, initialState);
 
 ###### 使用法
 ```js
-// ActionをReducerに伝搬
-store.dispatch(actionCreators())
+store.dispatch(actionCreators())// ActionをReducerに伝搬
 // stateの状態を購読。状態に変化があったらリスナーを実行
 store.subscribe(() => {
   /*
    * リスナーの処理を書く
    */
-  // stateを取得
-  store.getState();
+  store.getState()// stateを取得
 })
 ```
 
 #### Action
-applicationからstoreにデータを送るペイロード
-Storeにおいて唯一の情報源
-Actionは上記の ``` store.dispatch(actionCreators()) ``` dispatchメソッドの引数に渡しStoreに送られる
+- applicationからstoreにデータを送るペイロード
+- Storeにおいて唯一の情報源
+- Actionは上記の (``` store.dispatch(actionCreators()) ```) dispatchメソッドの引数に渡しStoreに送られる
 
 ###### 実装
 ```js
-// Action名を定義
-const SEND = 'SEND'
+const SEND = 'SEND'// Action名を定義
 // Action Creator
 const send = value => {
   return {
